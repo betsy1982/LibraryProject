@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display records</title>
+
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.min.css">
+  <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container" style="margin-top: 20px;">
+       <div class="btn-group" role="group" aria-label="Basic example">
+       	  <button type="button" class="btn btn-secondary">Actions</button>
+       	  <button type="button" class="btn btn-primary" onclick="ShowUpdate()">Edit</button>
+       	  <button type="button" class="btn btn-danger" onclick="ShowDelete()">Delete</button>
+	</div>
+	<br><br>
+<!-- //interfaces for update and delete -->
+<div class="container" id= "deleteDiv" style="display:none;">
+	<form>
+		<div class= "form-group">
+		 <input type="text" name="deleteRecordId" id="deleteRecordId"class="form-control" placeholder="delete record by id">
+		</div>
+		<div class= "form-group">
+			<button class="btn btn-danger" onclick="deleteRecordbyId()">Delete</button>
+         </div>
+        </form>
+      </div>
+      <div class="container" id="updateDiv" style="display: none;">
+      	<form>
+		<div class= "form-group">
+		 <input type="text" name="updateRecordId" id="updateRecordId"class="form-control" placeholder="update record by id">
+		 <div class= "form-group">
+		 <input type="text" name=  "updateEmail" id="updateEmail"class="form-control" placeholder="Enter new email">
+		</div>
+		<div class= "form-group">
+			<button class="btn btn-warning" onclick="updateRecordbyId()">Update</button>
+         </div>
+        </form>
+      </div>
+
+      <script type="text/javascript">
+      	 function showDelete(id) {
+      	 Let e =document.getElementById('deleteDiv');
+      	 e.style.display= (e.style.display=='block') ? 'none' :'block';
+
+      	 }
+      	 function showUpdate(id) {
+      	 	let e = document.getElementById('updateDiv');
+      	 	e.style.display = (e.style.display == 'block') ? 'none' :'block';
+      	 }
+      </script>
+
+      <!-- table display -->
+      <div class="container-fluid">
+      	 <table class="table" id="tableRecords">
+      	  <tr>
+      	  	  <th>Id</th>
+      	  	  <th>user First Name</th>
+      	  	  <th>user Last name</th>
+      	  	  <th>Email</th>
+      	  	  <th>Phone No</th>
+      	  </tr>
+
+      	  <tr>
+      	      <td></td>
+      	      <td></td>
+      	      <td></td>
+      	      <td></td>
+      	      <td></td>
+
+      	  </tr>
+      	</table>
+      
+      
+
+      </div>
+
+      
+          
+
+
+
+
+	</form>
+
+
+</nav>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+<script type="text/javascript" scr="../js/display.js"></script>
+ 
