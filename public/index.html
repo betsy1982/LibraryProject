@@ -4,7 +4,7 @@
 <!-- meta data to the document -->
 	<head>
 		<!-- title -->
-	<title>Library project</title>
+	<title>LibraryProject</title>
 	<!-- metadata -->
 	<!-- language encryption -->
 	<meta charset="UTF-8">
@@ -15,16 +15,126 @@
 	<!-- for responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style type="text/css">
 
-<!-- body -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #F4B400;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 1100px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 30px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height:800px; 
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+/*footer {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}*/
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@/*media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }*/
+}
+</style>
+</head>
 <body>
-<h1><CLASSIC LIBRARY></CLASSIC LIBRARY>
-		<h1 style="color: #0080ff;background-color= #777 ; font-size:35px; padding:30px;font-family:verdana;text-align: left;font-weight:bold; "></CLASSIC LIBRARY>
-	  <p style="color: #0080ff  ;font-size:35px; padding:30px;font-family:verdana;text-align:left; background-color:#777 ;font-weight: bold;">CLASSIC LIBRARY</p>
-    
-<html>
-<head>
-  <title>FirebaseLibraryApp</title>
+
+
+<header>
+  <h2>CLASSIC e-LIBRARY</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services Offered</a></li>
+      <li><a href="#">Sign Up</a></li>
+      <Li><a href="#">Login</a></Li>
+    </ul>
+  </nav>
+  <ul>
+   <li class=""><a href="index.html">Home</a><li>
+   <li class=""><a href="../authentication/login.html">Login</a><li>
+   <li class=""><a href="../authentication/signup.html">Signup</a><li>
+   <li class=""><a href="recordsDisplay.html"> Records</a><li>
+   <li class=""><a href="aboutus.html">About Us</a><li>
+   <li class=""><a href="services.html">Services Offered</a><li>
+
+  </ul>
+  <article>
+   <img src="../images/imagebk1.jpg" width="200" height="250"> 
+   <img src="../images/imagebk2.jpg" width="200" height="250"> 
+   <img src="../images/imagebk3.jpg" width="200" height="250"> 
+   <img src="../images/imagebk4.jpg" width="200" height="250"> 
+   <img src="../images/imagebk10.jpg" width="200" height="250"> 
+   <img src="../images/imagebk6.jpg" width="200" height="250"> 
+   <img src="../images/imagebk7.jpg" width="200" height="250"> 
+   <img src="../images/imagebk8.jpg" width="200" height="250"> 
+   <img src="../images/imagebk9.jpg" width="200" height="250"> 
+   <img src="../images/imagebk5.jpg" width="200" height="250"> 
+   <img src="../images/imagebk11.jpg" width="200" height="250"> 
+   <img src="../images/imagebk12.jpg" width="200" height="250"> 
+
+   </article>
+</section>
+
+<Footer>
+  <p>Footer</p></Footer> <style color:white;padding:10px;text align:centre; font:family;></style>
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script type="text/javascript" scr = "js/index.js"></script>
 
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -32,30 +142,7 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.min.css">
 
-
 </head>
-<body>
-<p></p>
-   <div class="container" style="margin: top:20px;"></div>
-   <form id="formUpload"></form>
-     <div class="form-group">
-      <input type="text" name="Username" id="Username" class="form-control"
-    placeholder="First Name">
-   </div>
-    </div>
-    <div class="form-group">
-      <input type="text" name="email" id="email" class="form-control" placeholder="email">
-</div>
-  <div class="form-group">
-      <input type="text" name="Phone No." id="Phone No." class="form-control" placeholder="Phone Number">
-    </div>
-      <input type="reset" name="reset" id="upload" class="btn btn-primary" value="Upload Details">
-    </div>
-     <div class="form-group">
-      <input type="Register" name="upload" id="upload" class="btn btn-primay" value="Register">
-    </div>
-
-
 
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
@@ -66,8 +153,6 @@
 
 </body>
 </html>
-
-
 
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">

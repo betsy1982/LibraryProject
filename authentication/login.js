@@ -62,3 +62,25 @@
 
 
   }
+
+
+  // google sign in
+   function googleLogin(){
+     alert("works");
+  // initializing google sign up
+   var base_provider =new firebase.auth.GoggleAuthProvider();
+   // signin using the googlefirebase method signInWithPopUp from firebase
+     firebase.auth().signInWithPopup(base_provider).then(function(response){
+          console.log(response);
+          alert("sign in success");
+          // redirect screen
+          window.location.replace("../public/recordaDisplay.html");
+
+
+    }).catch(function(error){
+        console.log(error);
+        alert("sign in with google failed" + error.code);
+    });
+
+
+  

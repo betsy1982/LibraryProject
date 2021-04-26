@@ -24,9 +24,21 @@
   databaseRecords.once('value', functions(snapshotRecords){
     // forEach to loop through records
     
-    // signout
+    //signout
       function signOut(){
        alert("works")
+    //signout
+    firebase.auth().signOut().then(
+       function(response){
+         alert("logged out");
+         window.location.replace("../authentication/login.html")
+       }
+
+      ).catch(function(error){
+         alert(error);
+         location.reload();
+      })
+
     }
 
 
